@@ -2,7 +2,7 @@ package com.shilp.exercise;
 
 public class Ex2 {
     public static void main(String[] args) {
-        int i = 2;
+        int i = 5;
         Ex2 obj = new Ex2();
         obj.print(i);
 
@@ -23,17 +23,16 @@ public class Ex2 {
 
         }
 
-        for (int i=0;i<n;i++){
+        for (int i = 0; i < n-1; i++) {
             // for the lower half of the triangle
-            for (int k = 0; k < i; k++) {
+            for (int k = 0; k < i+1; k++) {
                 System.out.print(" ");
             }
-            for (int j = 0; j < 2 * (n - i - 1) + 1; j++) {
+            for (int j = 0; j < 2*(n-2-i)+1; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
-
 
 
     }
