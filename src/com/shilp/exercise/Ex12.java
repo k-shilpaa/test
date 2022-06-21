@@ -4,8 +4,8 @@ public class Ex12 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
         int a = arr.length;
-        Ex12 returnElement = new Ex12();
-        int result = Ex12.returnElement(arr,1,arr.length-1,0);
+        Ex12 obj = new Ex12();
+        int result = obj.returnElement(arr,1,arr.length-1,0);
         System.out.println(result);
     }
 
