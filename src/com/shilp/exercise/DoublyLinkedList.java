@@ -7,8 +7,11 @@ public class DoublyLinkedList {
         DoublyLinkedList dList = new DoublyLinkedList();
         dList.push(2);
         dList.push(3);
+        dList.push(1);
         dList.insert(2,5);
+        dList.delete(1);
         dList.print();
+
 
     }
 
@@ -57,5 +60,21 @@ public class DoublyLinkedList {
         }
         return current;
     }
-
+    public void delete(int data){
+        DNode node=find(data);
+        if(node==null){
+            return;
+        }
+        if(node.equals(head)){
+            head=head.next;
+        }
+        if(node.next!=null){
+            node.next.prev=node.prev;
+        }
+        if(node.prev!=null){
+            node.prev.next=node.next;
+        }
+        node.next=null;
+        node.prev=null;
+    }
 }
